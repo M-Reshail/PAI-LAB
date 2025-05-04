@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000; /* pure black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, #000000, #2c001e); /* black to deep maroon gradient */
+}
+
+.chat-container {
+    background: #1c1c1c; /* dark gray */
+    width: 400px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3); /* pinkish shadow */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h2 {
+    text-align: center;
+    color: #ff4d6d; /* bright pink */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(255, 77, 109, 0.5);
+}
+
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #000000; /* black */
+    border-radius: 8px;
+}
+
+.input-container {
+    display: flex;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 8px 0 0 8px;
+    background-color: #222; /* dark input box */
+    color: white;
+}
+
+#user-input:focus {
+    border-color: #ff4d6d; /* pink */
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff4d6d; /* pink */
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff1f4b; /* darker pink */
+    transform: scale(1.05);
+}
+
+.user-message {
+    text-align: right;
+    margin: 5px;
+    color: #ffb300; /* amber/orange */
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.bot-message {
+    text-align: left;
+    margin: 5px;
+    color: #ffb3ff; /* light pink/purple */
+    font-weight: bold;
+    background-color: #4a0033; /* dark purple */
+    padding: 8px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 80%;
+}
